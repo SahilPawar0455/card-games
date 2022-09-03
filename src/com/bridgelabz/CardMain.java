@@ -7,5 +7,6 @@ public class CardMain {
         card.createCard();
         card.player();
         card.playerSequence();
+        card.deckShuffle();
     }
 }

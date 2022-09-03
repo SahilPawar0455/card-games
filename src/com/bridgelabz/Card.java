@@ -67,4 +67,12 @@ public class Card {
             System.out.println(player);
         }
     }
+    public void deckShuffle(){
+        for (int i = 0; i < numberOfCard; i++) {
+            int random = i +(int)(Math.random()*(numberOfCard-i));
+            String temp = deck[random];
+            deck[random] = deck[i];
+            deck[i] = temp;
+        }
+    }
 }
