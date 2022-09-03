@@ -8,5 +8,6 @@ public class CardMain {
         card.player();
         card.playerSequence();
         card.deckShuffle();
+        card.distributeCard();
     }
 }

@@ -59,13 +59,6 @@ public class Card {
                 }
             }
         }
-        displaySequencesPlayer();
-    }
-    public void displaySequencesPlayer() {
-        System.out.println("Sequences of player is : ");
-        for (Object player : listOfPlayer) {
-            System.out.println(player);
-        }
     }
     public void deckShuffle(){
         for (int i = 0; i < numberOfCard; i++) {
@@ -73,6 +66,24 @@ public class Card {
             String temp = deck[random];
             deck[random] = deck[i];
             deck[i] = temp;
+        }
+    }
+    public void distributeCard(){
+        int distributeCards = 9;
+        for (int i = 0; i < numberOfPlayer; i++) {
+            for (int j = 0; j < distributeCards; j++) {
+                arrayOfCard[i][j] = (deck[i + j * numberOfPlayer]);
+            }
+        }
+        displayCardPlayer(numberOfPlayer);
+    }
+    public void displayCardPlayer(int player){
+        for (int i = 0; i < player; i++) {
+            System.out.println("Player: "+sequencesOfPlayer.get(i));
+            for (int j = 0; j < 9; j++) {
+                System.out.print(arrayOfCard[i][j]+"\t");
+            }
+            System.out.println();
         }
     }
 }
