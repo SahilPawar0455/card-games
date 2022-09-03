@@ -14,6 +14,6 @@ public class Player {
     @Override
     public String toString() {
         return "Player " +
-                " name= " + name + '\'';
+                " name= " + name ;
     }
 }
