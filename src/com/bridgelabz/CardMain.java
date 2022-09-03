@@ -8,5 +8,7 @@ public class CardMain {
         System.out.println("Welcome to card game");
         Card card = new Card();
         card.createCard();
+        card.player();
+        card.displayPlayer();
     }
 }
