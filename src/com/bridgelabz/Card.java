@@ -8,12 +8,9 @@ public class Card {
     public String[] deck = new String[numberOfCard];
 
 
-    public void deck(){
+    public  void createCard(){
         for (int i = 0; i < numberOfCard; i++) {
-            int random = i +(int)(Math.random()*(numberOfCard-i));
-            String temp = deck[random];
-            deck[random] = deck[i];
-            deck[i] = temp;
+            deck[i] = ranks[i%13]+suits[i/13];
         }
     }
 }
